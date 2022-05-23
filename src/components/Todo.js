@@ -44,10 +44,11 @@ const Todo = () => {
                     onChange={handleChange}
                     className="createInput"
                     value={title}
+                    placeholder="Enter a new Task"
                 />
                 <input
                     onClick={handleSubmit}
-                    value="Create"
+                    value="ADD"
                     type="submit"
                     className="btnCreate"
                 />

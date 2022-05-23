@@ -5,6 +5,8 @@
     box-sizing: border-box;
     color: #f1f1f1;
     overflow-x: hidden;
+    font-weight: 500;
+    font-size: 16px;
 }
 html {
     background-color: #0a0c10;
@@ -32,7 +34,6 @@ body {
     border-radius: 5px;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
-
 .createInput {
     width: 70%;
     height: 45px;
@@ -44,7 +45,6 @@ body {
     position: relative;
     border-radius: 5px;
 }
-
 .btnCreate {
     position: relative;
     float: right;
@@ -54,7 +54,7 @@ body {
     font-size: 16px;
     border-radius: 5px;
     border: none;
-    background-color: #61dafb;
+    background-color: #a7c957;
     cursor: pointer;
 }
 
@@ -63,33 +63,96 @@ body {
     margin-top: 5%;
     width: auto;
     height: auto;
-    background-color: red;
     margin-bottom: 5%;
 }
 
 /* Tasks */
 .task {
-    height: 50px;
-    padding: 5px 10px;
+    height: 60px;
+    padding: auto;
     margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid #d1d2d3;
     cursor: pointer;
+    margin: 5px;
 }
 .taskButtons {
+    display: block;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    width: 20%;
-    background-color: blue;
+    width: 100px;
+    height: 45px;
+    background-color: transparent;
+}
+.taskTitle {
+    display: flex;
+    width: 90%;
+    height: 100%;
+    line-height: 100%;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 2px solid #f1f1f1;
 }
 .btnDelete {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #bc4749;
+    cursor: pointer;
+    margin-right: 3px;
+}
+.btnEdit {
+    width: 40px;
+    height: 40px;
+    margin-right: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #61dafb;
+    cursor: pointer;
+}
+.btnDelete span,
+.btnEdit span,
+.btnUpdate span {
+    overflow: hidden;
 }
 .btnUpdate {
+    width: 40px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #a7c957;
+    cursor: pointer;
+    margin-right: 40px;
+    margin-top: 15px;
 }
-
-.App-link {
-    color: #61dafb;
+.updateForm {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.editInput {
+    display: flex;
+    background-color: transparent;
+    width: 90%;
+    height: 100%;
+    line-height: 100%;
+    align-items: center;
+    border: none;
+    padding: 5px;
+    border-bottom: 2px solid #f1f1f1;
+    margin-top: 40px;
+}
+.editInput:focus,
+.editInput:active,
+.editInput:enabled .editInput:focus-visible {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #61dafb;
 }
