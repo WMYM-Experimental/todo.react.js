@@ -39,10 +39,10 @@ const Todo = () => {
 
     return (
         <div className="todoContainer">
-            <form className="todoCreateForm" onSubmit={handleSubmit}>
+            <form className="createForm" onSubmit={handleSubmit}>
                 <input
                     onChange={handleChange}
-                    className="todoInput"
+                    className="createInput"
                     value={title}
                 />
                 <input

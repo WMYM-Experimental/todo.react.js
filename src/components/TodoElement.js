@@ -10,18 +10,20 @@ const TodoElement = ({ atr, onUpdate, onDelete }) => {
         };
 
         return (
-            <div key={atr.id}>
-                {atr.title}
-                <button
-                    onClick={() => {
-                        setIsEdit(true);
-                    }}
-                >
-                    Edit
-                </button>
-                <button className="btnDelete" onClick={handleClick}>
-                    Delete
-                </button>
+            <div key={atr.id} className="task">
+                <div>{atr.title}</div>
+                <div className="taskButtons">
+                    <button
+                        onClick={() => {
+                            setIsEdit(true);
+                        }}
+                    >
+                        Edit
+                    </button>
+                    <button className="btnDelete" onClick={handleClick}>
+                        Delete
+                    </button>
+                </div>
             </div>
         );
     };
@@ -45,7 +47,7 @@ const TodoElement = ({ atr, onUpdate, onDelete }) => {
         };
 
         return (
-            <form className="update" onSubmit={handleSubmit}>
+            <form className="updateForm" onSubmit={handleSubmit}>
                 <input type="text" onChange={handleChange} value={newValue} />
                 <button className="btnUpdate" onClick={handleClick}>
                     Update
@@ -55,7 +57,9 @@ const TodoElement = ({ atr, onUpdate, onDelete }) => {
     };
 
     return (
-        <div className="todos">{isEdit ? <Edit></Edit> : <Task></Task>}</div>
+        <div className="todoElements">
+            {isEdit ? <Edit></Edit> : <Task></Task>}
+        </div>
     );
 };
 
